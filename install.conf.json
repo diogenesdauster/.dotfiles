@@ -1,7 +1,13 @@
 [
     {
+        "defaults": {
+            "link": {
+                "relink": true
+            }
+        }
+    },
+    {
         "shell": [
-            ["git submodule update --init --recursive", "Installing submodules"],
             ["mkdir -p ~/Developer ~/Developer/GitHub" , "Creating some directories"]
         ]
     },
@@ -19,9 +25,9 @@
     },
     {
         "shell": [
-            ["source ./install/brew.sh"     , "Installing brew "],
-            ["source ./install/brew-cask.sh", "Installing brew-cask "],
-            ["source ./install/npm.sh"      , "Installing npm"],
+            ["source ./install-p/brew.sh"     , "Installing brew "],
+            ["source ./install-p/brew-cask.sh", "Installing brew-cask "],
+            ["source ./install-p/npm.sh"      , "Installing npm"],
             ["source ./macos/defaults-chrome.sh"  , "Configuring chrome"],
             ["source ./macos/dock.sh"             , "Configuring defaults"],
             ["source ./macos/defaults.sh"         , "Configuring dock"]
