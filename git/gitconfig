@@ -10,7 +10,7 @@
   editor = "subl -n -w"
 
 [commit]
-  template = ~/.config/git/git-commit-template.txt
+  template = ~/.dotfile/git/git-commit-template.txt
 
 [color]
    ui = auto
