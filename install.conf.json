@@ -10,11 +10,11 @@
     },
     {
         "link": {
-            "~/.bash_profile": "/profile/bash_profile",
-            "~/.inputrc": "/profile/inputrc",
-            "~/.editorconfig": "/profile/editorconfig",
-            "~/.gitconfig": "/git/gitconfig",
-            "~/.gitignore_global": "/git/gitignore_global"
+            "~/.bash_profile": "profile/bash_profile",
+            "~/.inputrc": "profile/inputrc",
+            "~/.editorconfig": "profile/editorconfig",
+            "~/.gitconfig": "git/gitconfig",
+            "~/.gitignore_global": "git/gitignore_global"
         }
     },
     {

@@ -1,5 +1,5 @@
 # Enable tab completion
-source ~/.config/git/git-completion.bash
+source ~/.dotfiles/profile/git-completion.bash
 
 # colors!
 green="\[\033[0;32m\]"
@@ -45,7 +45,7 @@ alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl";
 PATH=$(echo -n $PATH | awk -v RS=: '{ if (!arr[$0]++) {printf("%s%s",!ln++?"":":",$0)}}')
 
 # Change command prompt
-source ~/.config/git/git-prompt.sh
+source ~/.dotfiles/profile/sgit-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
