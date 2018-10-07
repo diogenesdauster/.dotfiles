@@ -8,7 +8,7 @@
     },
     {
         "shell": [
-            ["mkdir -p ~/Developer ~/Developer/GitHub" , "Creating some directories"]
+            ["mkdir -p ~/Developer ~/Developer/GitHub ~/.vscode" , "Creating some directories"]
         ]
     },
     {
@@ -20,7 +20,8 @@
             "~/.inputrc": "profile/inputrc",
             "~/.editorconfig": "profile/editorconfig",
             "~/.gitconfig": "git/gitconfig",
-            "~/.gitignore_global": "git/gitignore_global"
+            "~/.gitignore_global": "git/gitignore_global",
+            "~/.vscode/extensions.json": "profile/extensions.json"
         }
     },
     {
@@ -28,9 +29,10 @@
             ["source ./install-p/brew.sh"     , "Installing brew "],
             ["source ./install-p/brew-cask.sh", "Installing brew-cask "],
             ["source ./install-p/npm.sh"      , "Installing npm"],
+            ["source ./install-p/vscode.sh"   , "Installing vscode extesion"],
+            ["source ./macos/defaults.sh"         , "Configuring defaults"],
             ["source ./macos/defaults-chrome.sh"  , "Configuring chrome"],
-            ["source ./macos/dock.sh"             , "Configuring defaults"],
-            ["source ./macos/defaults.sh"         , "Configuring dock"]
+            ["source ./macos/dock.sh"             , "Configuring dock"]
 
         ]
     }

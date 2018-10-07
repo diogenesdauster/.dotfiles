@@ -371,8 +371,8 @@ sudo mdutil -E / > /dev/null
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use "Pro" theme (black background color)
-defaults write com.apple.terminal "Default Window Settings" -string "Pro"
-defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
+defaults write com.apple.terminal "Default Window Settings" -string "Basic"
+defaults write com.apple.terminal "Startup Window Settings" -string "Basic"
 
 # Disable audible and visual bells
 defaults write com.apple.terminal "Bell" -bool false
