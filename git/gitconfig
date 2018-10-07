@@ -1,16 +1,16 @@
 [user]
-  name = Diógenes Dauster
-  email = diogenes.dauster@gmail.com
+	name = Diógenes Dauster
+	email = diogenes.dauster@gmail.com
 
 [github]
   user = diogenesdauster
 
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/dauster/.gitignore_global
   editor = "subl -n -w"
 
 [commit]
-  template = ~/.dotfile/git/git-commit-template.txt
+	template = ~/.dotfiles/git/git-commit-template.txt
 
 [color]
    ui = auto
