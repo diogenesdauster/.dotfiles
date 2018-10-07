@@ -1,0 +1,54 @@
+# Enable tab completion
+source ~/.config/git/git-completion.bash
+
+# colors!
+green="\[\033[0;32m\]"
+blue="\[\033[0;34m\]"
+purple="\[\033[0;35m\]"
+reset="\[\033[0m\]"
+
+PATH = "/bin:$PATH"
+PATH = "/usr/bin:$PATH"
+PATH = "/usr/local/bin:$PATH"
+PATH = "/sbin:$PATH"
+PATH = "/usr/sbin:$PATH"
+PATH = "/usr/local/sbin:$PATH"
+
+manpdf() {
+  man -t "$1" | open -f -a /Applications/Preview.app/
+}
+
+alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
+
+alias cleanupds="find . -type f -name '*.DS_Store' -ls -exec /bin/rm {} \;"
+alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;"
+
+# Create a new directory and enter it
+
+mk() {
+  mkdir -p "$@" && cd "$@"
+}
+
+# Fuzzy find file/dir
+
+ff() {  find . -type f -iname "$1";}
+fff() { find . -type f -iname "*$1*";}
+fd() {  find . -type d -iname "$1";}
+fdf() { find . -type d -iname "*$1*";}
+
+# Because SourceTree's $PATH gets screwed up starting it normally...
+alias st="open /Applications/SourceTree.app/Contents/MacOS/SourceTree";
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl";
+
+# Remove duplicates (preserving prepended items)
+# Source: http://unix.stackexchange.com/a/40755
+PATH=$(echo -n $PATH | awk -v RS=: '{ if (!arr[$0]++) {printf("%s%s",!ln++?"":":",$0)}}')
+
+# Change command prompt
+source ~/.config/git/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds git-related stuff
+# '\W' adds the name of the current directory
+export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
+

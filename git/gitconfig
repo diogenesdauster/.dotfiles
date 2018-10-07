@@ -1,0 +1,28 @@
+[user]
+  name = Diógenes Dauster
+  email = diogenes.dauster@gmail.com
+
+[github]
+  user = diogenesdauster
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = "subl -n -w"
+
+[commit]
+  template = ~/.config/git/git-commit-template.txt
+
+[color]
+   ui = auto
+
+[push]
+  default = upstream
+
+ [merge]
+  conflictstyle= diff3
+ 
+ [mergetool "sourcetree"]
+	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+
+
