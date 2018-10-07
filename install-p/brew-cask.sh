@@ -4,8 +4,11 @@
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit;
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+brew tap caskroom/versions
+brew tap caskroom/cask
+brew tap caskroom/fonts
 
 # Install packages
 
@@ -24,9 +27,9 @@ apps=(
   virtualbox
   visual-studio-code
   vlc
+  genymotion
   android-studio
 )
-
 brew cask install "${apps[@]}"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)

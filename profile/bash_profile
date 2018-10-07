@@ -7,12 +7,12 @@ blue="\[\033[0;34m\]"
 purple="\[\033[0;35m\]"
 reset="\[\033[0m\]"
 
-PATH = "/bin:$PATH"
-PATH = "/usr/bin:$PATH"
-PATH = "/usr/local/bin:$PATH"
-PATH = "/sbin:$PATH"
-PATH = "/usr/sbin:$PATH"
-PATH = "/usr/local/sbin:$PATH"
+#export PATH = "/bin:$PATH"
+#export PATH = "/usr/bin:$PATH"
+#export PATH = "/usr/local/bin:$PATH"
+#export PATH = "/sbin:$PATH"
+#export PATH = "/usr/sbin:$PATH"
+#export PATH = "/usr/local/sbin:$PATH"
 
 manpdf() {
   man -t "$1" | open -f -a /Applications/Preview.app/
@@ -22,6 +22,9 @@ alias flushdns="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -exec /bin/rm {} \;"
 alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;"
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
 
 # Create a new directory and enter it
 
@@ -38,14 +41,14 @@ fdf() { find . -type d -iname "*$1*";}
 
 # Because SourceTree's $PATH gets screwed up starting it normally...
 alias st="open /Applications/SourceTree.app/Contents/MacOS/SourceTree";
-alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl";
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl";
 
 # Remove duplicates (preserving prepended items)
 # Source: http://unix.stackexchange.com/a/40755
 PATH=$(echo -n $PATH | awk -v RS=: '{ if (!arr[$0]++) {printf("%s%s",!ln++?"":":",$0)}}')
 
 # Change command prompt
-source ~/.dotfiles/profile/sgit-prompt.sh
+source ~/.dotfiles/profile/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
