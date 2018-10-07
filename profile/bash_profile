@@ -42,6 +42,7 @@ fdf() { find . -type d -iname "*$1*";}
 # Because SourceTree's $PATH gets screwed up starting it normally...
 alias st="open /Applications/SourceTree.app/Contents/MacOS/SourceTree";
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl";
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code";
 
 # Remove duplicates (preserving prepended items)
 # Source: http://unix.stackexchange.com/a/40755
