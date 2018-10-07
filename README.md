@@ -55,5 +55,4 @@ It targets macOS systems.
 You can put your custom settings.
 
 ## Credits
-
-Many thanks to the [dotfiles community](https://dotfiles.github.io).
+Many thanks to the [dotfiles community](https://dotfiles.github.io), [dotbot](https://github.com/anishathalye/dotbot).
